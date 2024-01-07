@@ -1,0 +1,68 @@
+:root{
+    --bg-color: #151D26;
+    --bg-grey: #1C242E;
+    --orange-color: #FF8A00;
+    --border-color: #293641;
+    --icon-bg-color: #133730;
+    --green-color: #04AF5F;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+/* navbar css  */
+.profile-img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.fa-icons{
+    font-size: 20px;
+}
+
+.icons-parent{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--bg-grey);
+    cursor: pointer;
+}
+
+.active{
+    background-color: var(--orange-color);
+    color: var(--bg-color) !important;
+    font-weight: 500;
+}
+.nav-buttons{
+    border-radius: 20px;
+    padding: 8px 13px !important;
+    border: 1px solid var(--border-color);
+}
+
+/* dashboard css  */
+.total-card{
+    padding: 20px 30px;
+    background: rgb(38,59,64);
+    background: linear-gradient(90deg, rgba(38,59,64,1) 0%, rgba(31,85,70,1) 100%);
+    border-radius: 28px;
+    height: 170px;
+    cursor: pointer;
+}
+
+.card-icon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--icon-bg-color);
+}
+
+.percent-show{
+    color: var(--green-color);
+    border-color: var(--green-color) !important;
+}

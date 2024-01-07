@@ -67,6 +67,10 @@ body{
     border-color: var(--green-color) !important;
 }
 
+.dropdown-menu[data-bs-popper] {
+    left: -110px !important;
+}  /* custom dropdown css  */
+
 /* chart js css  */
 .chart-card{
     background-color: var(--bg-grey);

@@ -84,3 +84,8 @@ body{
 .barChart-container{
     width: 600px;
 }
+@media (max-width: 768px) {
+    .doughnut-container, .barChart-container {
+        width: 100%;
+    }
+}

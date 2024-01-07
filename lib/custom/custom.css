@@ -66,3 +66,17 @@ body{
     color: var(--green-color);
     border-color: var(--green-color) !important;
 }
+
+/* chart js css  */
+.chart-card{
+    background-color: var(--bg-grey);
+    padding: 20px ;
+    border-radius: 25px;
+}
+.doughnut-container{
+    width: 600px;
+}
+
+.barChart-container{
+    width: 600px;
+}

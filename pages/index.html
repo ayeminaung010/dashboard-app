@@ -113,7 +113,7 @@
         </div>
 
         <!-- dashboard card section  -->
-        <div class=" d-flex gap-4 mt-5">
+        <div class=" d-flex gap-5 mt-5">
             <div class="total-card">
                 <div class="d-flex gap-3">
                     <div class="">
@@ -183,11 +183,31 @@
                 </div>
             </div>
         </div>
+
+        <!-- chart js   -->
+        <div class="mt-4 d-flex gap-4">
+            <div class="chart-card">
+                <h5>Order By Store</h5>
+                <div class=" doughnut-container" ><canvas id="doughnut"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h5>Order Overview</h5>
+                <div class=" barChart-container" ><canvas id="bar"></canvas></div>
+            </div>
+        </div>
     </div>
     
 
     <script src="../lib/bootstrap/bootstrap.min.js"></script>
     <script src="../lib/jquery/jquery.min.js"></script>
     <script src="../lib/custom/custom.js"></script>
+
+    <!-- chart js  -->
+    <script src="../lib/chartjs/chartjs.min.js"></script>
+    <script src="../lib/chartjs//chart.umd.min.js"></script>
+    <script src="../lib/chartjs/helpers.min.js"></script>
+    <script src="../lib/custom/custom.js"></script>
+
+
   </body>
 </html>

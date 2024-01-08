@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../lib/fontawesome/fontawesome.min.css" />
     <link rel="stylesheet" href="../lib/custom/css/addproduct.css" />
-    
+
     <link rel="stylesheet" href="../lib/custom/css/custom.css" />
   </head>
   <body data-bs-theme="dark">
@@ -45,7 +45,11 @@
               </a>
             </li>
             <li class="nav-item ms-3">
-              <a class="nav-link nav-buttons" aria-current="page" href="product.html">
+              <a
+                class="nav-link nav-buttons"
+                aria-current="page"
+                href="product.html"
+              >
                 <i class="fa-solid fa-cube"></i>
                 <span class="ms-1">Products</span>
               </a>
@@ -143,7 +147,7 @@
             >
             <input
               type="date"
-              class="dateinput opacity-50"
+              class="dateinput opacity-50 form-control"
               id="dateInput"
               name="dateInput"
             />
@@ -159,16 +163,23 @@
                 aria-label="Dollar amount (with dot and two decimal places)"
                 id="price"
                 placeholder="Enter your  price!"
+                min="0"
                 required
               />
-              <span class="input-group-text">MMk</span>
+              <span class="input-group-text">MMK</span>
             </div>
           </div>
           <div class="input mb-3">
             <label for="exampleFormControlInput1" class="form-label">
               Quantity
             </label>
-            <input type="number" class="form-control" required />
+            <input
+              type="number"
+              class="form-control"
+              min="0"
+              value="0"
+              required
+            />
           </div>
         </div>
         <div class="col-auto ms-5 pt-3">
@@ -178,6 +189,7 @@
               id="countryCode"
               name="countryCode"
               onchange="changePhoneCode()"
+              class="form-control mt-2"
             >
               <option value="95">Myanmar (+95)</option>
               <option value="92">Pakistan (+92)</option>
@@ -196,25 +208,21 @@
             name="phoneInput"
             placeholder="Phone Number"
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            class="form-control mt-2"
             required
           />
           <div class="dropdown mt-3">
             <label class="pt-4">Choose Category</label>
-            <a
-              class="btn btn-secondary dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+            <select
+              class="form-select mt-2"
+              id="floatingSelect"
+              aria-label="Floating label select example"
             >
-              Category
-            </a>
-
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
           </div>
           <div class="input mt-3">
             <label for="exampleFormControlInput1" class="form-label mt-3"
@@ -226,6 +234,18 @@
               placeholder="Enter your description"
             ></textarea>
           </div>
+        </div>
+        <div class="col-auto pt-3">
+          <div class="">
+            <img src="../img/cloud.svg" class="showImage w-50" alt="">
+          </div>
+          <div class="">
+            <label for="countryCode">Select Picture:</label>
+            <input type="file" class="form-control mt-2">
+          </div>
+        </div>
+        <div class="">
+          <button class="btn btn-primary">Create Product</button>
         </div>
       </form>
     </div>

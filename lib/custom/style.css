@@ -1,0 +1,58 @@
+:root{
+    --bg-color: #151D26;
+    --bg-grey: #1C242E;
+    --orange-color: #FF8A00;
+    --border-color: #293641;
+    --icon-bg-color: #133730;
+    --green-color: #04AF5F;
+}
+
+.main-content{
+    height: 100vh;
+    width: 100%;
+}
+.content-title{
+    height: 100px;
+    width: 100%;
+  
+}
+
+
+.add-Product{
+    background-color:var(--orange-color);
+    padding:8px 25px;
+    border-radius: 15px;
+}
+
+.add-Product:hover{
+    background-color:#f69a31;
+}
+
+.content-card{
+    height: 100px;  
+}
+
+.card-badge{
+    padding: 12px 18px;
+    background-color:rgb(16, 27, 30);
+}
+
+.product-card{
+    padding: 20px 20px;
+    border-radius: 28px;
+    background: linear-gradient(45deg, rgb(0, 53, 78) 0%, rgb(0, 39, 57) 100%);
+    cursor: pointer;
+    border-color: linear-gradient(45deg, rgb(1, 168, 123) 0%, rgb(0, 203, 230) 100%);
+}
+
+.activeBadge{
+    background-color:var(--orange-color);
+}
+.dataTables_filter{
+    margin-bottom: 15px;
+}
+
+.dataTables_filter > label > input{
+    border-radius: 10px !important;
+}
+

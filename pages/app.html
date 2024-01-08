@@ -1,36 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App</title>
-    <!-- bootstrap-->
-    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
-    <script src="../lib/bootstrap/bootstrap.min.js" crossorigin="anonymous"></script>
-    <!-- fontawesome-->
-    <link rel="stylesheet" href="../lib/fontawesome/fontawesome.min.css">
-    <!-- font -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../lib/fontawesome/fontawesome.min.css" />
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../lib/datatable/datatables.min.css" />
 
-    <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="../lib/custom/custom.css" />
+  <link rel="stylesheet" href="../lib/custom/style.css" />
 </head>
-<body class="bg-success">
 
-    <div  class="container bg-light main-content" >
-        <div class="content-title mb-3 d-flex justify-content-between align-items-center">
-            <div class=" fs-4 fw-medium text-white">Products</div>
-            
-            <div>
-                <div class="btn add-Btn"><i class="fa-solid fa-plus me-2 fw-light"></i>Add Products</div>
+<body data-bs-theme="dark">
+  <!-- navbar  -->
+  <nav class="navbar navbar-expand-lg mt-3 border-bottom pb-3">
+    <div class="container">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+          <li class="nav-item ms-3">
+            <a class="nav-link nav-buttons" aria-current="page" href="#">
+              <i class="fa-solid fa-house"></i>
+              <span class="ms-1">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link nav-buttons" aria-current="page" href="#">
+              <i class="fa-solid fa-cube"></i>
+              <span class="ms-1">Category</span>
+            </a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link nav-buttons active" aria-current="page" href="#">
+              <i class="fa-solid fa-cube"></i>
+              <span class="ms-1">Products</span>
+            </a>
+          </li>
+
+          <li class="nav-item ms-3 dropdown">
+            <a class="nav-link dropdown-toggle nav-buttons" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex" role="search">
+          <div class="icons-parent ms-3">
+            <i class="fa-solid fa-magnifying-glass fa-icons"></i>
+          </div>
+          <div class="icons-parent ms-3">
+            <i class="fa-regular fa-bell fa-icons"></i>
+          </div>
+          <div class="">
+            <div class="nav-item ms-3 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="../img/profile.jpg" class="profile-img rounded-pill" alt="" />
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
             </div>
-
+          </div>
         </div>
-        <div class="content-card mb-2"></div>
-        <div class="content-table"></div>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Main Content  -->
+  <div class="container mt-4">
+    <!-- Title -->
+    <div class="d-flex justify-content-between">
+      <div>
+        <h4>Products</h4>
+      </div>
+      <div>
+        <div class="btn add-Product"><i class="fa-solid fa-plus me-2 fw-light"></i>Add Products</div>
+      </div>
     </div>
 
+    <!-- Product card section -->
+    <div class="row mt-4 mb-3">
+      <div class="col col-sm-6 col-lg-3 mb-4">
+        <div class="row mx-auto product-card">
+          <div class="d-flex justify-content-between mb-4">
+            <div class="col">Total Products</div>
+            <div class="col-3 text-end">
+              <div class="badge rounded-pill card-badge activeBadge"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+          <div class=" d-flex flex-column">
+              <h3 class="fw-bold">25,430</h3>
+              <span class="text-nowrap"><b>+1.5%</b> since the last week</span>
+          </div>
+        </div>
+      </div>
 
-    
+      <div class="col col-sm-6 col-lg-3 mb-4">
+        <div class="row mx-auto product-card">
+          <div class="d-flex justify-content-between mb-4">
+            <div class="col">Total Products</div>
+            <div class="col-3 text-end">
+              <div class="badge rounded-pill card-badge "><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+          <div class=" d-flex flex-column">
+              <h3 class="fw-bold">25,430</h3>
+              <span class="text-nowrap"><b>+1.5%</b> since the last week</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-sm-6 col-lg-3 mb-4">
+        <div class="row mx-auto product-card">
+          <div class="d-flex justify-content-between mb-4">
+            <div class="col">Total Products</div>
+            <div class="col-3 text-end">
+              <div class="badge rounded-pill card-badge "><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+          <div class=" d-flex flex-column">
+              <h3 class="fw-bold">25,430</h3>
+              <span class="text-nowrap"><b>+1.5%</b> since the last week</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-sm-6 col-lg-3 mb-4">
+        <div class="row mx-auto product-card">
+          <div class="d-flex justify-content-between mb-4">
+            <div class="col">Total Products</div>
+            <div class="col-3 text-end">
+              <div class="badge rounded-pill card-badge "><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+          </div>
+          <div class=" d-flex flex-column">
+              <h3 class="fw-bold">25,430</h3>
+              <span class="text-nowrap"><b>+1.5%</b> since the last week</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table section -->
+    <div class="col-12 table-responsive mb-4 ">
+      <table id="dataTable" style="background-color: #1C242E;"
+        class="table rounded-4 align-middle table-responsive text-center align-middle ">
+        <thead class=" align-middle" >
+          <tr>
+            <th class="text-center bg-transparent">#</th>
+            <th class="text-center bg-transparent">Image</th>
+            <th class="text-center bg-transparent">Price</th>
+            <th class="text-center bg-transparent">Qty</th>
+            <th class="text-center bg-transparent">Store</th>
+            <th class="text-center bg-transparent">Availability</th>
+            <th class="bg-transparent"></th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider "  >
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$678.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">4102</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$278.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">4052</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$178.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">9152</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$978.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">4752</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">878.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">1252</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$1278.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">4462</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$458.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">4152</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$878.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">4152</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$578.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">4152</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+          <tr th:each="order , i: ${orders}" >
+            <td class="bg-transparent " scope="row" > <input type="checkbox" class=""></td>
+            <td class="text-nowrap bg-transparent d-flex justify-content-center" >
+              <img class="rounded me-2" src="../img/product.jpg" width="60" height="60"><div  class="d-flex flex-column justify-content-center"><p class="m-0">Lorem ipsum dolor ...</p><span class="text-start fw-light">Blue-small</span></div></td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.orderNumber}">$177.35</td>
+            <td class="text-nowrap fw-semibold bg-transparent"
+              th:text="${order.restaurantName}">41144</td>
+            <td class="text-nowrap bg-transparent" th:text="${order.orderTypeName}">Store1</td>
+            <td class="text-nowrap bg-transparent"
+              th:text="${order.deliveryAddress} != '' ? ${order.deliveryAddress} : '-'"><span class="badge rounded-pill border border-success px-3 py-2">Active</span></td>
+              <td class="bg-transparent">
+                <button type="button" class="btn col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button type="button" class="btn col">
+                  <i class="fa-solid fa-trash-can" ></i>
+                </button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+  <script src="../lib/bootstrap/bootstrap.min.js"></script>
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/datatable/datatables.min.js"></script>
+  <script src="../lib/custom/custom.js"></script>
 </body>
+
 </html>

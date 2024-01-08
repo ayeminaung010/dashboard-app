@@ -1,0 +1,15 @@
+.input{
+    width: 400px;
+}
+.form-control{
+    border-radius: 10px;
+}
+.date{
+    display:flex;
+    flex-direction: column;
+
+}
+.dateinput{
+    width: 200px;
+
+}

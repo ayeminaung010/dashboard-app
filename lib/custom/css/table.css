@@ -12,41 +12,66 @@
   width: 100%;
 }
 
-.add-Product {
-  background-color: var(--orange-color);
-  padding: 8px 25px;
-  border-radius: 15px;
+/* add Product btn */
+.add-Product{
+    background-color:var(--orange-color);
+    padding:8px 25px;
+    border-radius: 15px;
 }
 
 .add-Product:hover {
   background-color: #f69a31;
 }
 
-
-.card-badge {
-  padding: 12px 18px;
-  background-color: rgb(16, 27, 30);
+/* Product card */
+.card-badge{
+    padding: 12px 18px;
+    background-color:rgb(16, 27, 30);
 }
 
-.product-card {
-  padding: 20px 20px;
-  border-radius: 28px;
-  background: linear-gradient(45deg, rgb(0, 53, 78) 0%, rgb(0, 39, 57) 100%);
-  cursor: pointer;
-  border-color: linear-gradient(
-    45deg,
-    rgb(1, 168, 123) 0%,
-    rgb(0, 203, 230) 100%
-  );
+.product-card{
+    padding: 20px 20px;
+    border-radius: 28px;
+    background: linear-gradient(45deg, #00364f 0%, #002739 100%);
+    cursor: pointer;
+    border-color: linear-gradient(45deg, #01a87b 0%, #00cbe6 100%);
+
 }
 
 .activeBadge {
   background-color: var(--orange-color);
 }
-.dataTables_filter {
-  margin-bottom: 15px;
+
+/* datatable */
+.dataTables_filter{
+    margin-bottom: 15px;
 }
 
 .dataTables_filter > label > input {
   border-radius: 10px !important;
 }
+
+.form-check-input:checked {
+	background-color: #1a1110;
+	border-color: #1a1110;
+}
+
+
+/* button */
+.updateBadge{
+    background-color:var(--orange-color);
+}
+.sumbitBtn{
+    background-color:var(--orange-color);
+}
+
+.sumbitBtn:hover{
+    background-color:#cc6d00;
+}
+.dismissBtn{
+    background-color: #00364f;
+}
+.dismissBtn:hover{
+    background-color: #002739;
+}
+

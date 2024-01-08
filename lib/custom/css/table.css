@@ -1,16 +1,17 @@
-:root{
-    --bg-color: #151D26;
-    --bg-grey: #1C242E;
-    --orange-color: #FF8A00;
-    --border-color: #293641;
-    --icon-bg-color: #133730;
-    --green-color: #04AF5F;
+:root {
+  --bg-color: #151d26;
+  --bg-grey: #1c242e;
+  --orange-color: #ff8a00;
+  --border-color: #293641;
+  --icon-bg-color: #133730;
+  --green-color: #04af5f;
 }
 
-.main-content{
-    height: 100vh;
-    width: 100%;
+.main-content {
+  height: 100vh;
+  width: 100%;
 }
+
 /* add Product btn */
 .add-Product{
     background-color:var(--orange-color);
@@ -18,8 +19,8 @@
     border-radius: 15px;
 }
 
-.add-Product:hover{
-    background-color:#f69a31;
+.add-Product:hover {
+  background-color: #f69a31;
 }
 
 /* Product card */
@@ -34,10 +35,11 @@
     background: linear-gradient(45deg, #00364f 0%, #002739 100%);
     cursor: pointer;
     border-color: linear-gradient(45deg, #01a87b 0%, #00cbe6 100%);
+
 }
 
-.activeBadge{
-    background-color:var(--orange-color);
+.activeBadge {
+  background-color: var(--orange-color);
 }
 
 /* datatable */
@@ -45,8 +47,8 @@
     margin-bottom: 15px;
 }
 
-.dataTables_filter > label > input{
-    border-radius: 10px !important;
+.dataTables_filter > label > input {
+  border-radius: 10px !important;
 }
 
 .form-check-input:checked {

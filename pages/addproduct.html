@@ -236,12 +236,12 @@
           </div>
         </div>
         <div class="col-auto pt-3">
-          <div class="">
-            <img src="../img/cloud.svg" class="showImage w-50" alt="">
+          <div>
+            <img id="uploadedImage" src="../img/cloud.svg" class="showImage w-50" alt="">
           </div>
-          <div class="">
+          <div>
             <label for="countryCode">Select Picture:</label>
-            <input type="file" class="form-control mt-2">
+            <input type="file" class="form-control mt-2" id="imageUploadInput" onchange="showImagePreview()">
           </div>
         </div>
         <div class="">

@@ -1,3 +1,5 @@
+@import url('../google-fonts/space-grotesk.css');
+
 :root{
     --bg-color: #151D26;
     --bg-grey: #1C242E;
@@ -7,9 +9,17 @@
     --green-color: #04AF5F;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     background-color: var(--bg-color);
+    font-family: 'Space Grotesk', sans-serif;
 }
+
 
 /* navbar css  */
 .profile-img{
@@ -41,6 +51,9 @@ body{
     padding: 8px 13px !important;
     border: 1px solid var(--border-color);
 }
+.nav-buttons:hover{
+    background-color: var(--orange-color);
+}
 
 /* dashboard css  */
 .total-card{
@@ -65,4 +78,27 @@ body{
 .percent-show{
     color: var(--green-color);
     border-color: var(--green-color) !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -110px !important;
+}  /* custom dropdown css  */
+
+/* chart js css  */
+.chart-card{
+    background-color: var(--bg-grey);
+    padding: 20px ;
+    border-radius: 25px;
+}
+.doughnut-container{
+    width: 600px;
+}
+
+.barChart-container{
+    width: 600px;
+}
+@media (max-width: 768px) {
+    .doughnut-container, .barChart-container {
+        width: 100%;
+    }
 }
